@@ -40,7 +40,7 @@ def openai_create_image_variation(image, content):
         field = st.text("Waiting for an answer...")
 
         response = client.images.create_variation(
-            image=image.read(),
+            image=image,
             n=1,
             size="256x256"
         )
@@ -51,10 +51,13 @@ def openai_create_image_variation(image, content):
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.image(message["content"])
+        if (message["role"] == "assistant"):
+            st.image(message["content"])
+        if (message["role"] == "user"):
+            st.text(message["content"])
 
 value = st.chat_input("Say something")
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("Choose a file", type=["png"])
 
 if ((value and value != "") and uploaded_file is not None):
     openai_create_image_variation(uploaded_file, value)
