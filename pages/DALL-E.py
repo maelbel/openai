@@ -51,10 +51,10 @@ def openai_create_image_variation(image, content):
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.text(message["content"])
+        st.image(message["content"])
 
-uploaded_file = st.file_uploader("Choose a file")
 value = st.chat_input("Say something")
+uploaded_file = st.file_uploader("Choose a file")
 
 if ((value and value != "") and uploaded_file is not None):
     openai_create_image_variation(uploaded_file, value)
