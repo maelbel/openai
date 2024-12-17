@@ -9,8 +9,6 @@ client = OpenAI(api_key=API_KEY)
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-value = st.chat_input("Prompt")
-
 def new_message(content: str):
     with (st.chat_message("user")):
         st.session_state.messages.append({"role": "user", "content": content})
