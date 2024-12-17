@@ -15,7 +15,7 @@ def new_message(content: str):
         st.write(content)
 
     with (st.chat_message("assistant")):
-        field = st.header("Waiting for an answer...")
+        field = st.text("Waiting for an answer...")
 
         completion = client.chat.completions.create(
             model="gpt-4o-mini",
