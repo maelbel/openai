@@ -12,3 +12,8 @@ Méthode generate_prompt_with_chatgpt : Cette méthode devrait prendre en entré
 
 -> Intégrer ces fonctionnalités dans une nouvelle page Streamlit
 -> Bonus : Ajouter la possibilité de télécharger les images générés via un bouton
+
+
+[Exercice]
+Créer un assistant vocal basé sur le chatbot.
+Vous devez utiliser whisper pour prendre l'entrée utilisateur afin de l'envoyer à l'api gpt-4o-mini. Enfin il faudra convertir la réponse de l'assistant en audio via l'api TTS.

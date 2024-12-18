@@ -40,11 +40,11 @@ def new_message(content: str):
 
         st.session_state.messages.append({"role": "assistant", "content": full_text})
 
+st.info("Interface utilisateur en temps réel")
+
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.text(message["content"])
-
-st.info("Interface utilisateur en temps réel")
+        st.markdown(message["content"])
 
 value = st.chat_input("Say something")
 
