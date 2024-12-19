@@ -10,7 +10,7 @@ pg = st.navigation([
     st.Page(path + "Stream.py", title="4. Stream"),
     st.Page(path + "Whisper.py", title="5. Whisper"),
     st.Page(path + "Fine-tuning.py", title="6. Fine-tuning"),
-    st.Page(path + "Exercise.py", title="7. Exercice final"),
+    st.Page(path + "History.py", title="7. Histoire dont vous êtes le héros"),
 ])
 
 pg.run()

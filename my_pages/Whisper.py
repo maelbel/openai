@@ -84,8 +84,6 @@ if (audio and option):
             input= text.choices[0].message.content
         )
 
-        print(text.choices[0].message.content)
-
         file_path = Path(__file__).parent.parent / "tmp/output.mp3"
 
         speech.stream_to_file(file_path)
