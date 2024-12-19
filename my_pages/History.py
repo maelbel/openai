@@ -74,6 +74,8 @@ def generate_story(prompt, context):
 
             st.image(image)
 
+            field.empty()
+
             text = ""
             for token in tokens:
                 text += token
@@ -81,8 +83,6 @@ def generate_story(prompt, context):
                 time.sleep(0.150)
 
             st.session_state.history.append({"role": "assistant", "content": full_text})
-
-            field.empty()
 
         return full_text
     except Exception as e:
